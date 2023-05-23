@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bgmain"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/pokemonlogo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ETpokemon"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.7"
+                android:background="@drawable/rounded"
+                android:gravity="center"
+                android:hint="Search Pokemon"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white">
+
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/BTNsearch"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/search"
+                android:elevation="1dp"
+                android:text="Search"
+                android:textColor="@color/white">
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/BTNclear"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/clear"
+                android:elevation="3dp"
+                android:text="Clear"
+                android:textColor="@color/white">
+
+            </ImageButton>
+
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/IVpokeball"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:elevation="2dp"
+                android:src="@drawable/apokeball" />
+
+            <TextView
+                android:id="@+id/TVname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="1dp"
+                android:gravity="center"
+                android:textColor="#444F68"
+                android:textSize="60dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TVindex"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="45dp"
+                android:layout_weight="0.7"
+                android:gravity="right"
+                android:text="INDEX"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"></TextView>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TVnamep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="1dp"
+                android:gravity="center"
+                android:text="POKEMON"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/TVtype"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="0.7"
+                android:background="@drawable/rounded"
+                android:gravity="center"
+                android:text="TYPE"
+                android:textColor="@color/white"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:text="BASE STATS"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/texthp"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="HP"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/TVhp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:enabled="false"
+                android:value="0"
+                android:valueFrom="0"
+                android:valueTo="255"
+                app:thumbRadius="0dp"
+                app:trackColorActive="#7ED957"
+                app:trackColorInactive="@color/white" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textatk"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="ATK"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/TVattack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:enabled="false"
+                android:value="0"
+                android:valueFrom="0"
+                android:valueTo="255"
+                app:thumbRadius="0dp"
+                app:trackColorActive="#C61E20"
+                app:trackColorInactive="@color/white" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textdef"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="DEF"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/TVdefense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:enabled="false"
+                android:value="0"
+                android:valueFrom="0"
+                android:valueTo="255"
+                app:thumbRadius="0dp"
+                app:trackColorActive="#8D77AB"
+                app:trackColorInactive="@color/white" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textspatk"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="SP. ATK"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/TVspAttack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:enabled="false"
+                android:value="0"
+                android:valueFrom="0"
+                android:valueTo="255"
+                app:thumbRadius="0dp"
+                app:trackColorActive="#FFCC01"
+                app:trackColorInactive="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textspdef"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="SP. DEF"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/TVspDefense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:enabled="false"
+                android:value="0"
+                android:valueFrom="0"
+                android:valueTo="255"
+                app:thumbRadius="0dp"
+                app:trackColorActive="#9BD4E4"
+                app:trackColorInactive="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textspeed"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="SPEED"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/TVspeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:enabled="false"
+                android:value="0"
+                android:valueFrom="0"
+                android:valueTo="255"
+                app:thumbRadius="0dp"
+                app:trackColorActive="#FFCC01"
+                app:trackColorInactive="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="MOVESET"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/TVmoves"
+                android:layout_width="350dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
